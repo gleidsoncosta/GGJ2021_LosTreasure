@@ -7,9 +7,12 @@ public class ProjectileMove : MonoBehaviour
     public Transform target;
     public Rigidbody _rigidbody;
     public float force;
+
+    public bool attack;
     // Start is called before the first frame update
     void Awake() {
         target = GameObject.Find("Dragon").transform;
+        attack = false;
     }
     
     void Start()
@@ -21,9 +24,17 @@ public class ProjectileMove : MonoBehaviour
     void Update()
     {
         //transform.position = Vector3.MoveTowards(transform.position, target.position, speed);
-        Vector3 f = target.position - transform.position;
-        f = f.normalized;
-        f = f*force;
-        _rigidbody.AddForce(f);
+        if(attack){
+            Vector3 f = target.position - transform.position;
+            f = f.normalized;
+            f = f*force;
+            _rigidbody.AddForce(f);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if(other.transform.tag == "Player"){
+            attack = true;
+        }
     }
 }

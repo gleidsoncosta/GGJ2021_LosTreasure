@@ -6,6 +6,8 @@ TagManager:
   tags:
   - dragon
   - projetil
+  - ground
+  - superficie
   layers:
   - Default
   - TransparentFX
