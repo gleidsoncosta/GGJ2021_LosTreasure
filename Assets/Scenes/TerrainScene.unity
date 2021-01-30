@@ -302,7 +302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723861869}
   m_LocalRotation: {x: 0.1035932, y: -0, z: -0, w: 0.9946197}
-  m_LocalPosition: {x: 2.22, y: 2.7, z: -9.89}
+  m_LocalPosition: {x: 2.22, y: 3.38, z: -13.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -325,7 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7879413524586344822, guid: aed68b18bc3dfb14799026ada9951e96, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7879413524586344822, guid: aed68b18bc3dfb14799026ada9951e96, type: 3}
       propertyPath: m_LocalPosition.x
@@ -381,10 +381,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2129504815}
     m_Modifications:
-    - target: {fileID: 7879413524586344816, guid: aed68b18bc3dfb14799026ada9951e96, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 26cb3f8fd94e6454889b794b874543cf, type: 2}
     - target: {fileID: 7879413524586344818, guid: aed68b18bc3dfb14799026ada9951e96, type: 3}
       propertyPath: m_Name
       value: Plane (2)
@@ -442,10 +438,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2129504815}
     m_Modifications:
-    - target: {fileID: 7879413524586344816, guid: aed68b18bc3dfb14799026ada9951e96, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 26cb3f8fd94e6454889b794b874543cf, type: 2}
     - target: {fileID: 7879413524586344818, guid: aed68b18bc3dfb14799026ada9951e96, type: 3}
       propertyPath: m_Name
       value: Plane (1)
@@ -503,6 +495,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 744875745, guid: 5c5a8c9c8433f454fa996273b91f25d0, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1813052107138722619, guid: 5c5a8c9c8433f454fa996273b91f25d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.024108674
@@ -594,7 +590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238889119316251729, guid: 825793a9e270a024c95ae15c6cdeab52, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.65
+      value: -6.14
       objectReference: {fileID: 0}
     - target: {fileID: 7238889119316251729, guid: 825793a9e270a024c95ae15c6cdeab52, type: 3}
       propertyPath: m_LocalPosition.y
@@ -602,7 +598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7238889119316251729, guid: 825793a9e270a024c95ae15c6cdeab52, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 7238889119316251729, guid: 825793a9e270a024c95ae15c6cdeab52, type: 3}
       propertyPath: m_LocalRotation.w
@@ -636,9 +632,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7321755013494466649, guid: 825793a9e270a024c95ae15c6cdeab52, type: 3}
+      propertyPath: m_Radius
+      value: 0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 8397916239129492914, guid: 825793a9e270a024c95ae15c6cdeab52, type: 3}
       propertyPath: m_jumpForce
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 825793a9e270a024c95ae15c6cdeab52, type: 3}
@@ -688,6 +688,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2129504815}
     m_Modifications:
+    - target: {fileID: 3737545336180582706, guid: aed68b18bc3dfb14799026ada9951e96, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7879413524586344816, guid: aed68b18bc3dfb14799026ada9951e96, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

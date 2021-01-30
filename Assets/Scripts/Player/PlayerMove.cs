@@ -20,8 +20,9 @@ public class PlayerMove : MonoBehaviour
     private float m_minJumpInterval = 0.25f;
     [SerializeField]private bool m_jumpInput = false;
     [SerializeField]private bool go_down = false;
+    [SerializeField]private bool m_dash = false;
+    [SerializeField]private bool dash_availabe = false;
 
-    
     private bool m_isGrounded;
 
     private List<Collider> m_collisions = new List<Collider>();
@@ -30,6 +31,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (!m_animator) { gameObject.GetComponent<Animator>(); }
         if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
+        dash_availabe = false;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -97,6 +99,11 @@ public class PlayerMove : MonoBehaviour
         if(!go_down && !m_isGrounded && Input.GetKeyDown(KeyCode.S)){
             go_down = true;
         }
+
+        if(dash_availabe && Input.GetKeyDown(KeyCode.D)){
+            m_dash = true;
+            dash_availabe = false;
+        }
     }
 
     private void FixedUpdate()
@@ -107,6 +114,7 @@ public class PlayerMove : MonoBehaviour
         m_wasGrounded = m_isGrounded;
         m_jumpInput = false;
         go_down = false;
+        dash_availabe = true;
     }
 
     private void DirectUpdate()
@@ -145,6 +153,12 @@ public class PlayerMove : MonoBehaviour
         {
 
             m_rigidBody.AddForce(Vector3.down * m_jumpForce*2, ForceMode.Impulse);
+        }
+
+        if (m_dash)
+        {
+            m_dash = false;
+            m_rigidBody.AddForce(Vector3.right * m_jumpForce/2, ForceMode.Impulse);
         }
 
 
