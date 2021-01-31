@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnviromentMove : MonoBehaviour
 {
-    public float h_vel;
+    LevelManager levelManager;
     // Start is called before the first frame update
     void Awake() {
-        h_vel = 4.0f;    
+        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
     }
     
     void Start()
@@ -18,11 +18,17 @@ public class EnviromentMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.left* h_vel * Time.deltaTime);
+        transform.Translate(Vector3.left* levelManager.enviroment_move * Time.deltaTime);
+        
         
         if(transform.position.x < -40.82248f){
-            float repos = 45.94651f - (-40.82248f - transform.position.x);
-            transform.position = new Vector3(repos, transform.position.y, transform.position.z);
+            if(transform.tag == "decoracao"){
+                Object.Destroy(gameObject);
+            }else{
+                float repos = 45.94651f - (-40.82248f - transform.position.x);
+                transform.position = new Vector3(repos, transform.position.y, transform.position.z);
+            }
         }
+
     }
 }

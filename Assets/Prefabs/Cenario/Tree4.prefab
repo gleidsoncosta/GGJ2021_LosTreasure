@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5711834070374840464}
   m_Layer: 0
   m_Name: Tree4
-  m_TagString: Untagged
+  m_TagString: decoracao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

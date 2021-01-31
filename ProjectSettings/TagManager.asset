@@ -9,6 +9,7 @@ TagManager:
   - ground
   - superficie
   - obstaculo
+  - decoracao
   layers:
   - Default
   - TransparentFX

@@ -20,17 +20,20 @@ public class PlayerMove : MonoBehaviour
     private float m_minJumpInterval = 0.25f;
     [SerializeField]private bool m_jumpInput = false;
     [SerializeField]private bool go_down = false;
-    [SerializeField]private bool m_dash = false;
+    public bool m_dash = false;
     [SerializeField]private bool dash_availabe = false;
 
     private bool m_isGrounded;
 
     private List<Collider> m_collisions = new List<Collider>();
 
+    LevelManager levelManager;
+
     private void Awake()
     {
         if (!m_animator) { gameObject.GetComponent<Animator>(); }
         if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
+        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         dash_availabe = false;
     }
 
@@ -103,6 +106,8 @@ public class PlayerMove : MonoBehaviour
         if(dash_availabe && Input.GetKeyDown(KeyCode.D)){
             m_dash = true;
             dash_availabe = false;
+            m_animator.speed += 0.5f;
+            levelManager.increseMove();
         }
     }
 
