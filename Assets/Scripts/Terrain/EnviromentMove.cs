@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnviromentMove : MonoBehaviour
 {
     LevelManager levelManager;
+    public float parallax = 1;
     // Start is called before the first frame update
     void Awake() {
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
@@ -18,7 +19,7 @@ public class EnviromentMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.left* levelManager.enviroment_move * Time.deltaTime);
+        transform.Translate(Vector3.left* (levelManager.enviroment_move/parallax) * Time.deltaTime);
         
         
         if(transform.position.x < -40.82248f){
