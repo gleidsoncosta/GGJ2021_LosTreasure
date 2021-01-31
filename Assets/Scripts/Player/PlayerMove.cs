@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -99,10 +100,10 @@ public class PlayerMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if(other.transform.tag == "endgame"){
-            Debug.Log("FIM DE JOGO - PERDEU");
+            SceneManager.LoadScene("Perdeu");
         }
         if(other.transform.tag == "dragon"){
-            Debug.Log("FIM DE JOGO - GANHOU");
+            SceneManager.LoadScene("Venceu");
         }
         if(other.transform.tag == "superficie"){
             levelManager.increseMove(-0.5f);
