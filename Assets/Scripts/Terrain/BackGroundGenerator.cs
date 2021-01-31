@@ -41,8 +41,7 @@ public class BackGroundGenerator : MonoBehaviour
             gb.AddComponent<EnviromentMove>();
             old_time = cur_time;
             elapsed_time = Random.Range(decor_density_min/levelManager.enviroment_move,decor_density_min/levelManager.enviroment_move);
-            Debug.Log(levelManager.enviroment_move + " " + Time.deltaTime + " " 
-                + (decor_density_min/levelManager.enviroment_move, decor_density_max/levelManager.enviroment_move));
+            
         }
     }
 

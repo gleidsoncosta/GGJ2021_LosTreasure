@@ -19,8 +19,14 @@ public class LevelManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void increseMove()
+    public void increseMove(float val = 0.5f)
     {
-            enviroment_move += 0.5f;
+            if(val < 0){
+                if(enviroment_move-val>=7){
+                    enviroment_move += val;
+                }
+            }else{
+                enviroment_move += val;
+            }
     }
 }

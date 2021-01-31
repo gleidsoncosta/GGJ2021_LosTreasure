@@ -5,7 +5,7 @@ using UnityEngine;
 public class DragonManager : MonoBehaviour
 {
     float elapsed_time, cur_time, old_time;
-    float elapsed_time2, cur_time2, old_time2;
+    //float elapsed_time2, cur_time2, old_time2;
     public Animator animator;
 
     public Transform ground;
@@ -20,9 +20,9 @@ public class DragonManager : MonoBehaviour
         old_time = cur_time;
         elapsed_time = getNewElapsedTime();
 
-        cur_time2 = Time.time;
-        old_time2 = cur_time2;
-        elapsed_time2 = 2f;
+        //cur_time2 = Time.time;
+        //old_time2 = cur_time2;
+        //elapsed_time2 = 2f;
     }
 
     // Update is called once per frame
@@ -48,8 +48,6 @@ public class DragonManager : MonoBehaviour
             }
         }*/
 
-        Debug.Log(n_moedas);
-
         getHit();
     }
 
@@ -59,7 +57,6 @@ public class DragonManager : MonoBehaviour
 
     private int getNCoins(int min = 2, int max = 5){
         int n = (int)Random.Range(min, max); 
-        Debug.Log(n);
         return n;
     }
 

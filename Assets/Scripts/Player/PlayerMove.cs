@@ -51,6 +51,11 @@ public class PlayerMove : MonoBehaviour
                 m_isGrounded = true;
             }
         }
+
+        if(collision.transform.tag == "coin"){
+            levelManager.moedas++;
+            GameObject.Destroy(collision.transform.gameObject);
+        }
     }
 
     private void OnCollisionStay(Collision collision)
@@ -90,6 +95,26 @@ public class PlayerMove : MonoBehaviour
             m_collisions.Remove(collision.collider);
         }
         if (m_collisions.Count == 0) { m_isGrounded = false; }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if(other.transform.tag == "endgame"){
+            Debug.Log("FIM DE JOGO - PERDEU");
+        }
+        if(other.transform.tag == "dragon"){
+            Debug.Log("FIM DE JOGO - GANHOU");
+        }
+        if(other.transform.tag == "superficie"){
+            levelManager.increseMove(-0.5f);
+            m_animator.speed -= 0.5f;
+            m_rigidBody.AddForce(Vector3.right * (-1)*m_jumpForce/2, ForceMode.Impulse);
+        }
+    }
+
+    private void OnTriggerStay(Collider other) {
+        if(other.transform.tag == "superficie"){
+            levelManager.increseMove(-0.1f);
+        }
     }
 
     private void Update()

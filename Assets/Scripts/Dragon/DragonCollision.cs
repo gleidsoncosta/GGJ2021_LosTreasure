@@ -29,11 +29,10 @@ public class DragonCollision : MonoBehaviour
             if(other.gameObject.name.Contains("pesado")){
                 Object.Destroy(other.gameObject);
                 hard = true;
-                Debug.Log("drop more coins");
+                
             }else{
                 Object.Destroy(other.gameObject);
                 hard = false;
-                Debug.Log("drop more less coins");
             }
         }
     }
