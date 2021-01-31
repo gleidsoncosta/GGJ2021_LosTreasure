@@ -32,7 +32,7 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         if (!m_animator) { gameObject.GetComponent<Animator>(); }
-        if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
+        if (!m_rigidBody) { gameObject.GetComponent<Rigidbody>(); }
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         dash_availabe = false;
     }

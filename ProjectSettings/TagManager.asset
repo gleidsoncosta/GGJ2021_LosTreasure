@@ -10,6 +10,7 @@ TagManager:
   - superficie
   - obstaculo
   - decoracao
+  - coin
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - 
   - obstaculo
-  - 
+  - chao
   - 
   - 
   - 

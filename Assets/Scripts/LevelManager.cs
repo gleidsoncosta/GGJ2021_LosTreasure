@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     public float enviroment_move;
     public PlayerMove playerMove;
 
+    public int moedas;
     // Start is called before the first frame update
     private void Awake() {
         enviroment_move = 7.0f;

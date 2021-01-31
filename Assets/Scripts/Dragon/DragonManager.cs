@@ -5,16 +5,24 @@ using UnityEngine;
 public class DragonManager : MonoBehaviour
 {
     float elapsed_time, cur_time, old_time;
+    float elapsed_time2, cur_time2, old_time2;
     public Animator animator;
+
+    public Transform ground;
+    public GameObject coin;
 
     public DragonCollision colisor;
     // Start is called before the first frame update
-    
+    int n_moedas;
     void Start()
     {
         cur_time = Time.time;
         old_time = cur_time;
         elapsed_time = getNewElapsedTime();
+
+        cur_time2 = Time.time;
+        old_time2 = cur_time2;
+        elapsed_time2 = 2f;
     }
 
     // Update is called once per frame
@@ -22,10 +30,25 @@ public class DragonManager : MonoBehaviour
     {
         cur_time = Time.time;
         if(cur_time - old_time > elapsed_time){
-            //Debug.Log("derruba " +getNCoins()+" moedas");
+            n_moedas += getNCoins();
             elapsed_time = getNewElapsedTime();
             old_time = cur_time;
         }
+
+        
+        /*if(n_moedas>0){
+            cur_time2 = Time.time;
+            if(cur_time2 - old_time2 > elapsed_time2){
+                old_time2 = cur_time2;
+
+                GameObject gb = (GameObject)Instantiate(coin);
+                gb.transform.position = transform.position;
+                gb.transform.parent = ground;
+                n_moedas--;
+            }
+        }*/
+
+        Debug.Log(n_moedas);
 
         getHit();
     }
@@ -34,8 +57,10 @@ public class DragonManager : MonoBehaviour
         return Random.Range(min, max);
     }
 
-    private int getNCoins(float min = 1, float max = 5){
-        return (int)Random.Range(min, max);
+    private int getNCoins(int min = 2, int max = 5){
+        int n = (int)Random.Range(min, max); 
+        Debug.Log(n);
+        return n;
     }
 
     private void getHit(){

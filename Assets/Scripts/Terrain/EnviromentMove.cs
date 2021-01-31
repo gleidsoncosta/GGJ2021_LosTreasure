@@ -21,10 +21,15 @@ public class EnviromentMove : MonoBehaviour
     {
         transform.Translate(Vector3.left* (levelManager.enviroment_move/parallax) * Time.deltaTime);
         
-        
-        if(transform.position.x < -40.82248f){
-            if(transform.tag == "decoracao"){
+        if(transform.position.x < -30.2){
+            if(transform.tag == "decoracao" || transform.tag == "coin"){
                 Object.Destroy(gameObject);
+
+            }
+        }
+        if(transform.position.x < -40.82248f){
+            if(transform.tag == "decoracao" || transform.tag == "coin"){
+            //    Object.Destroy(gameObject);
             }else{
                 float repos = 45.94651f - (-40.82248f - transform.position.x);
                 transform.position = new Vector3(repos, transform.position.y, transform.position.z);
