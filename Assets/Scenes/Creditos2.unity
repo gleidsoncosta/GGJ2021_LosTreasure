@@ -302,7 +302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.27936068, y: 0.72300005}
   m_AnchorMax: {x: 0.683, y: 0.9282887}
-  m_AnchoredPosition: {x: -135, y: 2}
+  m_AnchoredPosition: {x: -135.00002, y: 2}
   m_SizeDelta: {x: 7, y: 159}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &478800154
@@ -680,7 +680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.81481636}
   m_AnchorMax: {x: 0.19913116, y: 1}
-  m_AnchoredPosition: {x: 22, y: 1.5886841}
+  m_AnchoredPosition: {x: 21.999985, y: 1.5886841}
   m_SizeDelta: {x: 257, y: 173}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &827926095
@@ -834,7 +834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.19913116, y: 0.72300005}
   m_AnchorMax: {x: 0.301541, y: 1}
-  m_AnchoredPosition: {x: 126, y: 55}
+  m_AnchoredPosition: {x: 125.999985, y: 55}
   m_SizeDelta: {x: 375, y: 110}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1317300876
@@ -1332,9 +1332,22 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "ESPA\xC7O - PULAR\nS - PULO PARA BAIXO - ACELERA O MOVIMENTO DE DESCIDA\nD
-    - DASH - ACELERAR O MOVIMENTO\n\n\nOBJETOS ESPECIAIS\nARBUSTO - DESACELERA\nBOLAS
-    - USADAS PARA ATACAR"
+  m_Text: 'Created By Gleidson Costa
+
+
+    Arte - Unity Asset Store
+
+    Game GUI
+    Buttons
+
+    Character Pack: Free Sample
+
+    Low Poly Forest Pack
+
+    Painted
+    HQ 2D Forest Medieval Background
+
+    Micro Dragon Fino - Faceted Style'
 --- !u!222 &2098239996
 CanvasRenderer:
   m_ObjectHideFlags: 0
